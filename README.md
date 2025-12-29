@@ -32,7 +32,7 @@ A Flask-based web application that uses AI/ML to identify plant species from upl
 
 1. **Clone or navigate to the project directory**
    ```bash
-   cd AurumReads
+   cd Verdentia
    ```
 
 2. **Create a virtual environment (recommended)**
