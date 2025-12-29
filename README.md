@@ -1,146 +1,222 @@
-# 🌿 PioGreen - Pioneering Green Intelligence
+# Plant Species Detection Web Application
 
-**PioGreen** is a mobile application that uses Artificial Intelligence and Machine Learning to promote sustainable agriculture.  
-It helps identify plants, detect plant diseases, and classify sustainable farming methods — aiming to make farming more efficient, data-driven, and eco-friendly.
+A Flask-based web application that uses AI/ML to identify plant species from uploaded images. The application supports multiple image uploads and provides detailed species identification with confidence scores and alternative predictions.
 
+## Features
 
+- **Multiple Image Upload**: Upload multiple plant images (leaf, flower, whole plant) in a single request
+- **AI-Powered Identification**: Uses TensorFlow/Keras with EfficientNetB0 (pretrained on ImageNet)
+- **Detailed Results**: 
+  - Common and scientific names
+  - Confidence scores
+  - Top 3 alternative predictions
+  - Plant detection verification
+- **Modern UI**: Beautiful, responsive web interface with drag-and-drop support
+- **Image Validation**: Automatic validation of file format and size
 
-## 📘 Project Overview
+## Technology Stack
 
-Agriculture is one of the most important industries for human survival, but it faces serious challenges like crop diseases, overuse of resources, and unsustainable practices.  
-PioGreen aims to assist farmers, students, and researchers by providing a smart, AI-powered tool that supports better agricultural decision-making through image classification and sustainability insights.
+- **Backend**: Flask (Python)
+- **Machine Learning**: TensorFlow/Keras with EfficientNetB0
+- **Image Processing**: PIL/Pillow
+- **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
 
-The app has three core modules:
-1. **Plant Detection** – Identify the type of plant using AI-based image classification.  
-2. **Plant Disease Detection** – Detect plant leaf diseases and provide information on symptoms and prevention.  
-3. **Sustainable Farming Classifier** – Suggest sustainable farming practices based on plant and crop data.
+## Installation
 
+### Prerequisites
 
+- Python 3.8 or higher
+- pip (Python package manager)
 
-## 🎯 Objectives
+### Setup Steps
 
-- Build an easy-to-use mobile app that applies AI to support green agriculture.  
-- Use computer vision models to identify plant species and diseases from images.  
-- Encourage sustainable practices through intelligent recommendations.  
-- Help farmers and students learn about sustainable farming with technology.
+1. **Clone or navigate to the project directory**
+   ```bash
+   cd AurumReads
+   ```
 
+2. **Create a virtual environment (recommended)**
+   ```bash
+   python -m venv venv
+   
+   # On Windows
+   venv\Scripts\activate
+   
+   # On Linux/Mac
+   source venv/bin/activate
+   ```
 
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## 🚀 Features
+4. **Run the application**
+   ```bash
+   python app.py
+   ```
 
-| Module | Functionality | Dataset Used | Model Type |
-|--------|----------------|---------------|-------------|
-| 🌿 **Plant Detection** | Identifies plant species from image | LeafSnap / Flavia | MobileNetV3 / EfficientNet-Lite |
-| 🍂 **Plant Disease Detection** | Detects crop diseases from leaves | PlantVillage (Kaggle) | CNN (ResNet50 / EfficientNet) |
-| 🌾 **Sustainable Farming Classifier** | Classifies farm fields as sustainable or not | Sustainable Farm Dataset / EuroSAT | Binary CNN Classifier |
+5. **Access the application**
+   - Open your browser and navigate to: `http://localhost:5000`
 
+## Usage
 
+1. **Upload Images**:
+   - Click "Choose Files" or drag and drop images onto the upload area
+   - Supported formats: JPG, PNG
+   - Maximum file size: 16MB per image
+   - Multiple images can be uploaded simultaneously
 
-## 🧠 How It Works
+2. **View Results**:
+   - Click "Identify Plants" to process the images
+   - Results will show:
+     - Whether a plant was detected
+     - Primary species identification with confidence score
+     - Alternative predictions (if confidence is below threshold)
 
-1. **User uploads or captures an image** (leaf, plant, or field).  
-2. The image is **preprocessed** (resized, normalized).  
-3. The app’s 3 modules run in sequence using **TensorFlow Lite models**.  
-4. **Results are displayed**:  
-   - Plant name  
-   - Disease (if any)  
-   - Sustainability score  
-   - Eco-friendly farming tips  
+## Model Information
 
+### Current Model
 
+The application currently uses **EfficientNetB0** pretrained on ImageNet as a base model. This is a placeholder model that should be fine-tuned on plant-specific datasets for production use.
 
+### Fine-Tuning for Production
 
-## 🎨 App UI Structure
+To improve accuracy for plant species identification:
 
-| Screen | Description |
-|--------|--------------|
-| 🌱 **Splash Screen** | Animated logo “PioGreen – Pioneering Green Intelligence” |
-| 📸 **Home / Upload Screen** | Upload or capture plant/farm image |
-| 🧠 **Analysis Screen** | Displays progress while models infer results |
-| 📊 **Result Dashboard** | Shows identified plant, disease, sustainability score, and eco-tips |
-| 🌿 **Tips Section** | Curated and AI-generated sustainable farming recommendations |
+1. **Prepare Plant Dataset**:
+   - Use datasets like:
+     - [iNaturalist](https://www.inaturalist.org/)
+     - [PlantNet](https://plantnet.org/)
+     - [PlantCLEF](https://www.imageclef.org/lifeclef/2018/plant)
+   
+2. **Fine-Tune the Model**:
+   - Create a training script to fine-tune the EfficientNetB0 model
+   - Replace the classification head with the number of plant species in your dataset
+   - Train on your plant dataset
 
+3. **Update Class Mapping**:
+   - Create a JSON file mapping class indices to plant species names
+   - Update `class_mapping_path` in `ml_model.py`
 
+4. **Save and Load Model**:
+   - Save the fine-tuned model
+   - Update `model_path` in `PlantSpeciesClassifier` initialization
 
-## ⚙️ Tech Stack
+### Example Fine-Tuning Structure
 
-| Layer | Technology |
-|-------|-------------|
-| **Frontend (Mobile)** | Flutter (Dart) |
-| **ML Models** | TensorFlow / Keras → TensorFlow Lite |
-| **Model Deployment** | TFLite Interpreter in Flutter |
-| **Backend (Optional)** | Flask API / Firebase |
-| **Database (Optional)** | Firebase Realtime / Firestore |
-| **Image Processing** | OpenCV / Pillow |
+```python
+# In ml_model.py, update the model creation:
+# Replace 1000 with your number of plant species
+predictions = keras.layers.Dense(num_plant_species, activation='softmax')(x)
+```
 
+## Project Structure
 
+```
+AurumReads/
+├── app.py                 # Main Flask application
+├── ml_model.py            # ML model implementation
+├── image_utils.py         # Image preprocessing utilities
+├── requirements.txt       # Python dependencies
+├── README.md             # This file
+├── templates/
+│   └── index.html        # Frontend HTML template
+├── static/
+│   ├── style.css         # CSS styles
+│   └── script.js         # Frontend JavaScript
+└── uploads/              # Uploaded images (created automatically)
+```
 
-## 🧩 Datasets
+## API Endpoints
 
-| Module | Dataset | Size | Classes | Source |
-|--------|----------|-------|----------|--------|
-| **Plant Detection** | LeafSnap / Flavia | ~30K | 30–50 species | [LeafSnap](https://leafsnap.com/dataset/) |
-| **Disease Detection** | PlantVillage | ~54K | 38 | [Kaggle Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease) |
-| **Sustainability Detection** | Sustainable vs Non-Sustainable Farms | ~27K | 2 | [Kaggle Dataset](https://www.kaggle.com/datasets/d4rklucif3r/sustainable-vs-non-sustainable-farms) |
+### `GET /`
+- Renders the main web interface
 
+### `POST /upload`
+- Uploads and processes plant images
+- **Request**: Multipart form data with `images` field (multiple files allowed)
+- **Response**: JSON with identification results
+  ```json
+  {
+    "results": [
+      {
+        "filename": "plant.jpg",
+        "has_plant": true,
+        "primary_species": {
+          "common_name": "Rose",
+          "scientific_name": "Rosa",
+          "confidence": 0.85,
+          "category": "Flowering Plant"
+        },
+        "alternatives": [...]
+      }
+    ]
+  }
+  ```
 
+### `GET /health`
+- Health check endpoint
+- Returns model status
 
-## 🔧 Model Training Summary
+## Configuration
 
-1. **Preprocessing**
-   - Image resizing (224×224)
-   - Normalization (0–1 scaling)
-   - Data augmentation (rotation, zoom, flip)
+Edit `app.py` to customize:
 
-2. **Training**
-   - Optimizer: Adam
-   - Loss: Categorical Crossentropy
-   - Epochs: 25–50 (depending on dataset size)
-   - Batch size: 32
-   - Early stopping with validation monitoring
+- `UPLOAD_FOLDER`: Directory for uploaded images
+- `MAX_CONTENT_LENGTH`: Maximum file size (default: 16MB)
+- `ALLOWED_EXTENSIONS`: Allowed image formats
 
-3. **Conversion**
-   - Trained `.h5` or `.pt` → `.tflite`
-   - Quantization (for smaller mobile model size)
-   - Integrated using `tflite_flutter` plugin in Flutter
+Edit `ml_model.py` to customize:
 
+- `confidence_threshold`: Minimum confidence for plant detection (default: 0.5)
+- `alternative_threshold`: Minimum confidence for alternative predictions (default: 0.3)
 
+## Development
 
-## 🌍 Sustainability Impact
+### Running in Development Mode
 
-**PioGreen** aligns with UN Sustainable Development Goals:
-- **SDG 2:** Zero Hunger  
-- **SDG 12:** Responsible Consumption & Production  
-- **SDG 15:** Life on Land  
+The application runs in debug mode by default. For production:
 
-By empowering farmers and agri-students with plant health and eco-awareness insights, it promotes a **greener, smarter future**.
+1. Set `debug=False` in `app.py`
+2. Use a production WSGI server (e.g., Gunicorn, uWSGI)
+3. Configure proper security settings
 
+### Adding New Features
 
+- **Model Improvements**: Modify `ml_model.py` to use different architectures or add post-processing
+- **UI Enhancements**: Update `templates/index.html` and `static/style.css`
+- **API Extensions**: Add new routes in `app.py`
 
-## 📊 Sample Output
+## Limitations
 
-**Input:** Photo of a tomato leaf in a crop field  
-**Output:**
-🌿 Plant: Tomato (Solanum lycopersicum)
-🍂 Disease: Leaf Curl Virus (Confidence: 91%)
-🌾 Sustainability: Sustainable (Eco Index: 0.82)
-💡 Suggestion: Use neem extract spray and organic compost.
+- Current model uses ImageNet weights (not plant-specific)
+- Accuracy will be limited until fine-tuned on plant datasets
+- Processing time depends on image size and hardware
+- GPU recommended for faster inference
 
+## Future Improvements
 
+- [ ] Fine-tune model on plant-specific datasets
+- [ ] Add image preview before upload
+- [ ] Implement batch processing for large datasets
+- [ ] Add model versioning and A/B testing
+- [ ] Implement caching for faster repeated predictions
+- [ ] Add user authentication and history
+- [ ] Support for more image formats
+- [ ] Mobile app integration
 
-## 💡 Future Enhancements
-- 📍 Geo-tagging farms using location data  
-- ☁️ Cloud-based model inference for faster results  
-- 🧬 Crop growth tracker for recurring scans  
-- 🔔 Push notifications with eco-farming reminders  
+## License
 
+This project is open source and available for educational and research purposes.
 
+## Contributing
 
-## 🧑‍💻 Author
-**👩‍💻 Vidhi N. Pateliya**  
-Final Year, Computer Science Engineering (AI Specialization)    
- 
+Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
 
- 
-## ✨ Tagline
-> “**PioGreen** — Pioneering Green Intelligence for a Sustainable Tomorrow.” 🌍💚
+## Acknowledgments
+
+- TensorFlow/Keras for the ML framework
+- EfficientNet architecture by Google Research
+- Flask for the web framework
+
