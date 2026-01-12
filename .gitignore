@@ -1,0 +1,21 @@
+venv
+flower_recognition/oxford_flowers/flowers-102
+flower_recognition/oxford_flowers/setid.mat
+flower_recognition/oxford_flowers/102flowers.tgz
+flower_recognition/oxford_flowers/jpg
+flower_recognition/oxford_flowers/imagelabels.mat
+flower_recognition/class_names.json
+flower_recognition/training_history.json
+flower_recognition/flower_model.pth
+flower_recognition/class_names.json
+checkpoints/
+data/class_names.json
+
+# ML artifacts
+*.pth
+*.pt
+*.jpg
+
+# Python
+__pycache__/
+*.pyc

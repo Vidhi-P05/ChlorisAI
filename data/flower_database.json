@@ -1,0 +1,818 @@
+{
+  "pink primrose": {
+    "scientific_name": "Oenothera speciosa",
+    "family": "Onagraceae",
+    "description": "A low-growing perennial with cup-shaped pink flowers that often bloom in the evening.",
+    "medicinal_uses": "Historically used by Native Americans for soothing minor aches and gastrointestinal issues.",
+    "habitat": "Native to grasslands and open, disturbed sites in North America.",
+    "blooming_season": "Spring to Summer"
+  },
+  "hard-leaved pocket orchid": {
+    "scientific_name": "Paphiopedilum micranthum",
+    "family": "Orchidaceae",
+    "description": "A rare, terrestrial orchid known for its slipper-shaped pink pouch and mottled, hard leaves.",
+    "medicinal_uses": "No significant medicinal uses documented; primarily valued for horticulture.",
+    "habitat": "Limestone areas and rocky outcrops in Southeast Asia.",
+    "blooming_season": "Late Winter to Spring"
+  },
+  "canterbury bells": {
+    "scientific_name": "Campanula medium",
+    "family": "Campanulaceae",
+    "description": "A biennial plant producing tall spires of bell-shaped flowers in shades of blue, purple, pink, or white.",
+    "medicinal_uses": "Not commonly used in modern medicine; historically symbolic in gardens.",
+    "habitat": "Native to southern Europe; cultivated in gardens worldwide.",
+    "blooming_season": "Late Spring to Early Summer"
+  },
+  "sweet pea": {
+    "scientific_name": "Lathyrus odoratus",
+    "family": "Fabaceae",
+    "description": "A climbing annual with highly fragrant, butterfly-shaped flowers in a wide color range.",
+    "medicinal_uses": "Seeds are toxic if ingested; plant is not used medicinally.",
+    "habitat": "Native to Sicily, southern Italy, and the Aegean Islands; grown in temperate gardens.",
+    "blooming_season": "Spring to Early Summer"
+  },
+  "english marigold": {
+    "scientific_name": "Calendula officinalis",
+    "family": "Asteraceae",
+    "description": "A cheerful annual with bright orange or yellow, daisy-like flower heads.",
+    "medicinal_uses": "Flower petals are used in salves, teas, and tinctures for skin inflammation, wounds, and as an antiseptic.",
+    "habitat": "Native to southern Europe; widely naturalized in gardens and temperate regions.",
+    "blooming_season": "Spring to Fall"
+  },
+  "tiger lily": {
+    "scientific_name": "Lilium lancifolium",
+    "family": "Liliaceae",
+    "description": "A vigorous perennial with striking orange flowers covered in dark spots and recurved petals.",
+    "medicinal_uses": "Bulbs are edible and used in some traditional Asian medicines for respiratory and heart conditions.",
+    "habitat": "Native to China, Japan, and Korea; found in meadows, forest edges, and gardens.",
+    "blooming_season": "Mid to Late Summer"
+  },
+  "moon orchid": {
+    "scientific_name": "Phalaenopsis amabilis",
+    "family": "Orchidaceae",
+    "description": "An epiphytic orchid with elegant, arching sprays of white flowers that resemble moths in flight.",
+    "medicinal_uses": "Not used medicinally; one of the most popular ornamental orchids worldwide.",
+    "habitat": "Tropical rainforests of Southeast Asia and Australia, growing on trees.",
+    "blooming_season": "Can bloom multiple times a year, often in Spring or Fall"
+  },
+  "bird of paradise": {
+    "scientific_name": "Strelitzia reginae",
+    "family": "Strelitziaceae",
+    "description": "A tropical perennial with unique, crane-like orange and blue flowers emerging from a beak-shaped bract.",
+    "medicinal_uses": "No significant medicinal uses; important as a cut flower and ornamental.",
+    "habitat": "Native to South Africa; cultivated in tropical and subtropical gardens.",
+    "blooming_season": "Late Winter to Early Spring"
+  },
+  "monkshood": {
+    "scientific_name": "Aconitum napellus",
+    "family": "Ranunculaceae",
+    "description": "A tall perennial with hooded, deep purple-blue flowers and deeply divided, dark green leaves.",
+    "medicinal_uses": "Historically used as a pain reliever and sedative, but all parts are highly poisonous. Use is dangerous and not recommended.",
+    "habitat": "Native to western and central Europe; found in moist pastures and mountain meadows.",
+    "blooming_season": "Mid to Late Summer"
+  },
+  "globe thistle": {
+    "scientific_name": "Echinops ritro",
+    "family": "Asteraceae",
+    "description": "A striking perennial with spherical, steely-blue flower heads atop silvery, spiny stems.",
+    "medicinal_uses": "Root extracts have been used in traditional medicine for headaches and as a diuretic.",
+    "habitat": "Native to Europe and Asia; thrives in dry, sunny meadows and rocky slopes.",
+    "blooming_season": "Mid-Summer to Early Fall"
+  },
+  "snapdragon": {
+    "scientific_name": "Antirrhinum majus",
+    "family": "Plantaginaceae",
+    "description": "A popular annual or perennial with colorful, tubular flowers that 'snap' open when squeezed.",
+    "medicinal_uses": "Historically used as a poultice for tumors and ulcers; now primarily an ornamental.",
+    "habitat": "Native to the Mediterranean region; widely grown in temperate gardens.",
+    "blooming_season": "Spring to Fall"
+  },
+  "colt's foot": {
+    "scientific_name": "Tussilago farfara",
+    "family": "Asteraceae",
+    "description": "A low-growing perennial with yellow, dandelion-like flowers that appear before the heart-shaped leaves.",
+    "medicinal_uses": "Flowers and leaves have been used in syrups and teas to soothe coughs, bronchitis, and sore throats.",
+    "habitat": "Native to Europe and parts of Asia; colonizes disturbed, clay-rich soils, roadsides, and riverbanks.",
+    "blooming_season": "Late Winter to Early Spring"
+  },
+  "king protea": {
+    "scientific_name": "Protea cynaroides",
+    "family": "Proteaceae",
+    "description": "A large shrub with massive, iconic flower heads consisting of a central dome surrounded by colorful bracts.",
+    "medicinal_uses": "No major medicinal uses; it is the national flower of South Africa and prized in floristry.",
+    "habitat": "Endemic to the fynbos region of South Africa, on well-drained, acidic, rocky slopes.",
+    "blooming_season": "Spring to Summer"
+  },
+  "spear thistle": {
+    "scientific_name": "Cirsium vulgare",
+    "family": "Asteraceae",
+    "description": "A tall, spiny biennial with purple, fluffy flower heads and fiercely lobed, prickly leaves.",
+    "medicinal_uses": "Root has been used as a tonic and astringent; young stems are edible when peeled.",
+    "habitat": "Native to Europe and Asia; an invasive weed in pastures, roadsides, and disturbed ground.",
+    "blooming_season": "Mid-Summer to Early Fall"
+  },
+  "yellow iris": {
+    "scientific_name": "Iris pseudacorus",
+    "family": "Iridaceae",
+    "description": "A robust, rhizomatous perennial with bright yellow flowers and sword-shaped leaves.",
+    "medicinal_uses": "Rhizome has been used as a cathartic and emetic, but it is toxic and can cause severe discomfort.",
+    "habitat": "Native to Europe, western Asia, and northwest Africa; grows in wetlands, pond edges, and riverbanks.",
+    "blooming_season": "Late Spring to Early Summer"
+  },
+  "globe-flower": {
+    "scientific_name": "Trollius europaeus",
+    "family": "Ranunculaceae",
+    "description": "A herbaceous perennial with spherical, bright yellow or orange buttercup-like flowers.",
+    "medicinal_uses": "Historically used in folk medicine for wounds and as a remedy for scurvy, but it contains irritant compounds.",
+    "habitat": "Native to damp meadows, stream banks, and alpine regions of Europe and Asia.",
+    "blooming_season": "Late Spring to Early Summer"
+  },
+  "purple coneflower": {
+    "scientific_name": "Echinacea purpurea",
+    "family": "Asteraceae",
+    "description": "A hardy perennial with large, daisy-like purple flowers featuring a prominent spiky, coppery-orange central cone.",
+    "medicinal_uses": "Widely used to support immune function and reduce the severity and duration of colds and flu.",
+    "habitat": "Native to prairies, open woodlands, and roadsides in central and eastern North America.",
+    "blooming_season": "Summer to Early Fall"
+  },
+  "peruvian lily": {
+    "scientific_name": "Alstroemeria aurea",
+    "family": "Alstroemeriaceae",
+    "description": "A tuberous perennial with clusters of lily-like flowers in vibrant colors like orange, yellow, pink, and white, often with speckled throats.",
+    "medicinal_uses": "No significant medicinal uses; primarily a popular and long-lasting cut flower.",
+    "habitat": "Native to grasslands and mountain slopes in South America; widely cultivated in gardens.",
+    "blooming_season": "Spring to Summer"
+  },
+  "balloon flower": {
+    "scientific_name": "Platycodon grandiflorus",
+    "family": "Campanulaceae",
+    "description": "A clump-forming perennial named for its unique flower buds that swell like balloons before opening into star-shaped blue, purple, or white flowers.",
+    "medicinal_uses": "The root (Platycodon root) is used in traditional Korean and Chinese medicine to treat respiratory ailments like coughs and sore throats.",
+    "habitat": "Native to East Asia; grows in sunny meadows, slopes, and woodland edges.",
+    "blooming_season": "Mid to Late Summer"
+  },
+  "giant white arum lily": {
+    "scientific_name": "Zantedeschia aethiopica",
+    "family": "Araceae",
+    "description": "A striking perennial with large, pure white, funnel-shaped spathes surrounding a yellow spadix and broad, glossy green leaves.",
+    "medicinal_uses": "Used in traditional medicine for dressing wounds and treating headaches, but all parts are toxic if ingested raw.",
+    "habitat": "Native to southern Africa in marshes and stream banks; naturalized in similar habitats worldwide.",
+    "blooming_season": "Late Spring to Mid-Summer"
+  },
+  "fire lily": {
+    "scientific_name": "Lilium bulbiferum",
+    "family": "Liliaceae",
+    "description": "A tall lily bearing upward-facing, vibrant orange flowers with dark spots. Some varieties produce bulbils in the leaf axils.",
+    "medicinal_uses": "Bulbs have been used in poultices for ulcers and skin inflammations in traditional European medicine.",
+    "habitat": "Native to mountainous regions of Europe, thriving in meadows, scrub, and rocky slopes.",
+    "blooming_season": "Early to Mid-Summer"
+  },
+  "pincushion flower": {
+    "scientific_name": "Scabiosa spp.",
+    "family": "Caprifoliaceae",
+    "description": "A perennial or annual with intricate, domed flower heads in shades of blue, lavender, pink, or white, resembling a pincushion filled with pins.",
+    "medicinal_uses": "Historically, the genus name 'Scabiosa' derives from its use in treating scabies and other itchy skin conditions.",
+    "habitat": "Native to Europe, Asia, and Africa; found in meadows, grasslands, and cultivated gardens.",
+    "blooming_season": "Summer to Fall"
+  },
+  "fritillary": {
+    "scientific_name": "Fritillaria meleagris",
+    "family": "Liliaceae",
+    "description": "A bulbous perennial with distinctive, nodding, bell-shaped flowers in a chequered pattern of purple and white.",
+    "medicinal_uses": "Historically used in cough medicines, but many species are now rare and protected.",
+    "habitat": "Native to European floodplain meadows and damp grasslands.",
+    "blooming_season": "Spring"
+  },
+  "red ginger": {
+    "scientific_name": "Alpinia purpurata",
+    "family": "Zingiberaceae",
+    "description": "A tropical plant with striking, long-lasting bright red bracts that form a cone-shaped inflorescence, from which small white flowers emerge.",
+    "medicinal_uses": "Primarily ornamental; related species in the ginger family have widespread medicinal uses.",
+    "habitat": "Native to Southeast Asia and the Pacific Islands; thrives in humid tropical forests and gardens.",
+    "blooming_season": "Year-round in tropical climates, peaking in Summer"
+  },
+  "grape hyacinth": {
+    "scientific_name": "Muscari armeniacum",
+    "family": "Asparagaceae",
+    "description": "A small, bulbous spring plant producing dense spikes of tiny, urn-shaped, deep blue flowers that resemble clusters of grapes.",
+    "medicinal_uses": "No major medicinal uses; occasionally used in perfumery.",
+    "habitat": "Native to the Mediterranean region; naturalized in lawns, woodlands, and rocky areas.",
+    "blooming_season": "Early to Mid-Spring"
+  },
+  "corn poppy": {
+    "scientific_name": "Papaver rhoeas",
+    "family": "Papaveraceae",
+    "description": "An annual wildflower with delicate, bright red petals surrounding a dark center, often found fluttering in fields.",
+    "medicinal_uses": "Mild sedative properties; petals are used in syrups and teas for coughs, insomnia, and mild pain relief.",
+    "habitat": "Native to Europe and Asia; common in cultivated fields, roadsides, and disturbed soil.",
+    "blooming_season": "Late Spring to Early Summer"
+  },
+  "prince of wales feathers": {
+    "scientific_name": "Amaranthus hypochondriacus",
+    "family": "Amaranthaceae",
+    "description": "An annual plant with tall, upright, plume-like inflorescences of deep red or purple flowers and broad green leaves.",
+    "medicinal_uses": "Leaves are nutritious and have been used as a poultice for wounds; seeds are a gluten-free grain.",
+    "habitat": "Native to the Americas; cultivated as a grain and ornamental, also found in disturbed areas.",
+    "blooming_season": "Mid-Summer to Fall"
+  },
+  "stemless gentian": {
+    "scientific_name": "Gentiana acaulis",
+    "family": "Gentianaceae",
+    "description": "A low-growing, mat-forming perennial with large, solitary, trumpet-shaped, intense blue flowers that sit directly on the basal leaves.",
+    "medicinal_uses": "The root is a classic bitter tonic used to stimulate digestion and appetite.",
+    "habitat": "Native to the alpine meadows and mountains of central and southern Europe.",
+    "blooming_season": "Late Spring to Summer"
+  },
+  "artichoke": {
+    "scientific_name": "Cynara cardunculus var. scolymus",
+    "family": "Asteraceae",
+    "description": "A thistle-like perennial grown for its large, edible flower buds composed of fleshy bracts and a tender heart.",
+    "medicinal_uses": "Leaf extracts are used to support liver function, lower cholesterol, and aid digestion.",
+    "habitat": "Native to the Mediterranean region; cultivated in temperate climates worldwide.",
+    "blooming_season": "Summer (harvested before full bloom)"
+  },
+  "sweet william": {
+    "scientific_name": "Dianthus barbatus",
+    "family": "Caryophyllaceae",
+    "description": "A short-lived perennial forming dense clusters of small, fragrant flowers with serrated petals in red, pink, white, or bicolor patterns.",
+    "medicinal_uses": "Not commonly used medicinally; historically used in tonics for its mild antiseptic properties.",
+    "habitat": "Native to southern Europe and parts of Asia; naturalized in meadows and gardens in temperate zones.",
+    "blooming_season": "Late Spring to Early Summer"
+  },
+  "carnation": {
+    "scientific_name": "Dianthus caryophyllus",
+    "family": "Caryophyllaceae",
+    "description": "A popular perennial with fragrant, ruffled flowers in a wide range of colors including pink, red, white, and yellow.",
+    "medicinal_uses": "Traditionally used in herbal teas for calming nerves, reducing inflammation, and treating minor skin conditions.",
+    "habitat": "Native to the Mediterranean region; widely cultivated in gardens and greenhouses worldwide.",
+    "blooming_season": "Late Spring through Summer"
+  },
+  "garden phlox": {
+    "scientific_name": "Phlox paniculata",
+    "family": "Polemoniaceae",
+    "description": "A tall perennial with large clusters of fragrant, five-petaled flowers in shades of pink, purple, white, and red.",
+    "medicinal_uses": "Historically used by Native Americans to treat skin conditions and as a mild laxative.",
+    "habitat": "Native to eastern North America; thrives in meadows, open woodlands, and garden borders.",
+    "blooming_season": "Mid-Summer to Early Fall"
+  },
+  "love in the mist": {
+    "scientific_name": "Nigella damascena",
+    "family": "Ranunculaceae",
+    "description": "An annual plant with feathery, fine-cut leaves and delicate blue, white, or pink flowers surrounded by a misty bract of fine leaves.",
+    "medicinal_uses": "Seeds have been used as a digestive aid and to treat intestinal worms; also used as a culinary spice.",
+    "habitat": "Native to southern Europe and North Africa; grows in fields, roadsides, and gardens.",
+    "blooming_season": "Late Spring to Early Summer"
+  },
+  "mexican aster": {
+    "scientific_name": "Cosmos bipinnatus",
+    "family": "Asteraceae",
+    "description": "A tall annual with daisy-like flowers in pink, white, or crimson colors, with feathery, fern-like foliage.",
+    "medicinal_uses": "Limited medicinal use; primarily ornamental, though some species are used in traditional medicine for skin conditions.",
+    "habitat": "Native to Mexico and the southern United States; thrives in open, sunny areas with well-drained soil.",
+    "blooming_season": "Summer to Fall"
+  },
+  "alpine sea holly": {
+    "scientific_name": "Eryngium alpinum",
+    "family": "Apiaceae",
+    "description": "A striking perennial with metallic blue, thistle-like flower heads surrounded by spiny, ruffled bracts.",
+    "medicinal_uses": "Root has been used as a diuretic and to treat urinary tract infections in traditional medicine.",
+    "habitat": "Native to alpine meadows and rocky slopes in central and southern Europe.",
+    "blooming_season": "Mid to Late Summer"
+  },
+  "ruby-lipped cattleya": {
+    "scientific_name": "Cattleya labiata",
+    "family": "Orchidaceae",
+    "description": "A showy epiphytic orchid with large, fragrant flowers featuring a distinctive ruby-red lip and lavender petals.",
+    "medicinal_uses": "No significant medicinal uses; highly valued as an ornamental and parent of many hybrid orchids.",
+    "habitat": "Native to rainforests of Brazil, growing on trees in humid environments.",
+    "blooming_season": "Fall"
+  },
+  "cape flower": {
+    "scientific_name": "Protea spp.",
+    "family": "Proteaceae",
+    "description": "A diverse genus of shrubs known for their dramatic, large flower heads with stiff, colorful bracts.",
+    "medicinal_uses": "Limited medicinal use; primarily valued for cut flowers and ornamental gardening.",
+    "habitat": "Native to South Africa's fynbos region, particularly the Cape Floristic Region.",
+    "blooming_season": "Varies by species, generally Spring to Summer"
+  },
+  "great masterwort": {
+    "scientific_name": "Astrantia major",
+    "family": "Apiaceae",
+    "description": "A clump-forming perennial with unique, pincushion-like flower heads surrounded by papery bracts in white, pink, or red shades.",
+    "medicinal_uses": "Historically used to treat wounds and digestive disorders; roots were considered a remedy for snake bites.",
+    "habitat": "Native to mountain meadows and damp woodlands in central and eastern Europe.",
+    "blooming_season": "Early to Mid-Summer"
+  },
+  "siam tulip": {
+    "scientific_name": "Curcuma alismatifolia",
+    "family": "Zingiberaceae",
+    "description": "Not a true tulip, but a tropical perennial with cone-shaped pink or purple bracts that resemble flowers, rising above lance-shaped leaves.",
+    "medicinal_uses": "Related to turmeric but not widely used medicinally; primarily grown as an ornamental cut flower.",
+    "habitat": "Native to Thailand and Cambodia; grows in tropical forests and cultivated gardens.",
+    "blooming_season": "Summer"
+  },
+  "lenten rose": {
+    "scientific_name": "Helleborus orientalis",
+    "family": "Ranunculaceae",
+    "description": "An evergreen perennial with nodding, cup-shaped flowers in shades of white, pink, purple, or green that bloom early in the year.",
+    "medicinal_uses": "Historically used as a purgative and to treat worms, but all parts are toxic and can be dangerous.",
+    "habitat": "Native to Greece and Turkey; thrives in woodland gardens and shaded, moist areas.",
+    "blooming_season": "Late Winter to Early Spring"
+  },
+  "barbeton daisy": {
+    "scientific_name": "Gerbera jamesonii",
+    "family": "Asteraceae",
+    "description": "A popular perennial daisy with large, colorful flower heads in bright shades of red, orange, yellow, pink, and white.",
+    "medicinal_uses": "No significant medicinal uses; one of the most important cut flowers in the floral industry.",
+    "habitat": "Native to South Africa; cultivated worldwide in gardens and greenhouses.",
+    "blooming_season": "Spring through Fall in suitable climates"
+  },
+  "daffodil": {
+    "scientific_name": "Narcissus pseudonarcissus",
+    "family": "Amaryllidaceae",
+    "description": "A spring-blooming bulb with trumpet-shaped flowers, typically yellow or white, surrounded by six petals.",
+    "medicinal_uses": "Contains alkaloids with potential medicinal properties, but is toxic if ingested; used historically for wound healing.",
+    "habitat": "Native to Europe and North Africa; naturalized in meadows, woodlands, and gardens worldwide.",
+    "blooming_season": "Early to Mid-Spring"
+  },
+  "sword lily": {
+    "scientific_name": "Gladiolus spp.",
+    "family": "Iridaceae",
+    "description": "A tall perennial with sword-shaped leaves and showy flower spikes in a wide range of colors, often arranged on one side of the stem.",
+    "medicinal_uses": "Corms have been used to treat diarrhea and dysentery; also used in poultices for wounds.",
+    "habitat": "Native to South Africa, Mediterranean Europe, and Asia; grows in well-drained soils in sunny locations.",
+    "blooming_season": "Summer"
+  },
+  "poinsettia": {
+    "scientific_name": "Euphorbia pulcherrima",
+    "family": "Euphorbiaceae",
+    "description": "A shrub known for its bright red, pink, or white bracts (modified leaves) that surround small, yellow flowers.",
+    "medicinal_uses": "Latex has been used in traditional medicine to treat fevers and skin conditions, but can be irritating.",
+    "habitat": "Native to Mexico and Central America; widely cultivated as a holiday ornamental plant.",
+    "blooming_season": "Winter (November to January)"
+  },
+  "bolero deep blue": {
+    "scientific_name": "Centaura cyanus (cultivar)",
+    "family": "Asteraceae",
+    "description": "A cultivar of cornflower with intense, deep blue, double flowers on slender stems with gray-green foliage.",
+    "medicinal_uses": "Flowers have anti-inflammatory properties and are used in eye washes and skin tonics.",
+    "habitat": "Cultivated variety; original species native to European grain fields and disturbed ground.",
+    "blooming_season": "Late Spring to Early Summer"
+  },
+  "wallflower": {
+    "scientific_name": "Erysimum cheiri",
+    "family": "Brassicaceae",
+    "description": "A perennial or biennial plant with clusters of fragrant, four-petaled flowers in shades of yellow, orange, red, or purple.",
+    "medicinal_uses": "Historically used in traditional medicine for heart conditions and as a diuretic, but can be toxic in large doses.",
+    "habitat": "Native to southern Europe; commonly found on old walls, cliffs, and rocky places.",
+    "blooming_season": "Spring to Early Summer"
+  },
+  "marigold": {
+    "scientific_name": "Tagetes spp.",
+    "family": "Asteraceae",
+    "description": "An annual plant with bright orange, yellow, or red pom-pom like flowers and finely divided, aromatic foliage.",
+    "medicinal_uses": "Used in traditional medicine for skin wounds, inflammation, and as an antiseptic; also planted as a natural pest deterrent.",
+    "habitat": "Native to the Americas; widely cultivated in gardens worldwide in sunny locations.",
+    "blooming_season": "Summer to Fall"
+  },
+  "buttercup": {
+    "scientific_name": "Ranunculus spp.",
+    "family": "Ranunculaceae",
+    "description": "A common perennial with glossy, bright yellow flowers that have a distinctive cup shape and shiny petals.",
+    "medicinal_uses": "Generally considered toxic; historically used externally in poultices for arthritis and nerve pain with caution.",
+    "habitat": "Found worldwide in meadows, pastures, woodlands, and damp areas.",
+    "blooming_season": "Spring to Early Summer"
+  },
+  "oxeye daisy": {
+    "scientific_name": "Leucanthemum vulgare",
+    "family": "Asteraceae",
+    "description": "A perennial wildflower with white, daisy-like petals surrounding a bright yellow central disc.",
+    "medicinal_uses": "Traditionally used to treat coughs, wounds, and skin conditions; flowers and leaves are edible in moderation.",
+    "habitat": "Native to Europe and Asia; naturalized in fields, roadsides, and grasslands worldwide.",
+    "blooming_season": "Late Spring to Summer"
+  },
+  "common dandelion": {
+    "scientific_name": "Taraxacum officinale",
+    "family": "Asteraceae",
+    "description": "A perennial herb with bright yellow composite flowers that turn into spherical seed heads (clocks).",
+    "medicinal_uses": "Leaves are diuretic and rich in vitamins; roots support liver health and digestion; used as a detoxifying herb.",
+    "habitat": "Ubiquitous in lawns, meadows, roadsides, and disturbed soils across temperate regions.",
+    "blooming_season": "Spring to Fall, nearly year-round in mild climates"
+  },
+  "petunia": {
+    "scientific_name": "Petunia × hybrida",
+    "family": "Solanaceae",
+    "description": "A popular annual with trumpet-shaped flowers in nearly every color, often with contrasting veins or edges.",
+    "medicinal_uses": "No significant medicinal uses; primarily ornamental, though some species have mild antimicrobial properties.",
+    "habitat": "Cultivated hybrid; native species from South America; grown in gardens, containers, and hanging baskets.",
+    "blooming_season": "Spring until Frost"
+  },
+  "wild pansy": {
+    "scientific_name": "Viola tricolor",
+    "family": "Violaceae",
+    "description": "A small annual or short-lived perennial with cheerful three-colored flowers typically in purple, yellow, and white.",
+    "medicinal_uses": "Used in traditional European medicine for skin conditions (eczema, acne), respiratory issues, and as a mild diuretic.",
+    "habitat": "Native to Europe and Asia; grows in fields, meadows, and open woodlands.",
+    "blooming_season": "Spring to Early Fall"
+  },
+  "primula": {
+    "scientific_name": "Primula vulgaris",
+    "family": "Primulaceae",
+    "description": "A low-growing perennial forming a rosette of wrinkled leaves, with clusters of pale yellow, fragrant flowers.",
+    "medicinal_uses": "Flowers have been used for nervous tension and insomnia; roots as an expectorant for coughs.",
+    "habitat": "Native to western and southern Europe; found in woodlands, hedgerows, and shaded banks.",
+    "blooming_season": "Early Spring"
+  },
+  "sunflower": {
+    "scientific_name": "Helianthus annuus",
+    "family": "Asteraceae",
+    "description": "A tall annual with a large, dark central disc surrounded by bright yellow ray florets; heads track the sun.",
+    "medicinal_uses": "Seeds are nutritious and rich in vitamin E; oil is used for skin conditions; historically used for pulmonary ailments.",
+    "habitat": "Native to North America; cultivated worldwide in sunny, open fields.",
+    "blooming_season": "Mid-Summer to Early Fall"
+  },
+  "pelargonium": {
+    "scientific_name": "Pelargonium spp.",
+    "family": "Geraniaceae",
+    "description": "Commonly called geraniums, these plants have rounded, often scented leaves and clusters of five-petaled flowers.",
+    "medicinal_uses": "Essential oils (especially from rose-scented varieties) used in aromatherapy for stress relief and skin care.",
+    "habitat": "Native to South Africa; widely cultivated as bedding plants and in containers in temperate regions.",
+    "blooming_season": "Spring to Fall"
+  },
+  "bishop of llandaff": {
+    "scientific_name": "Dahlia 'Bishop of Llandaff'",
+    "family": "Asteraceae",
+    "description": "A cultivar of dahlia with stunning, semi-double scarlet red flowers contrasted by dark, almost black, foliage.",
+    "medicinal_uses": "No specific medicinal uses; valued as an ornamental garden plant.",
+    "habitat": "Cultivated variety; requires well-drained soil and full sun in garden settings.",
+    "blooming_season": "Mid-Summer to First Frost"
+  },
+  "gaura": {
+    "scientific_name": "Oenothera lindheimeri",
+    "family": "Onagraceae",
+    "description": "A perennial with delicate, wand-like stems covered in small white or pink flowers that resemble fluttering butterflies.",
+    "medicinal_uses": "Not widely used medicinally; primarily an ornamental plant for naturalistic gardens.",
+    "habitat": "Native to southern North America; thrives in prairies, open woodlands, and well-drained garden beds.",
+    "blooming_season": "Late Spring to Fall"
+  },
+  "geranium": {
+    "scientific_name": "Geranium spp. (Cranesbill)",
+    "family": "Geraniaceae",
+    "description": "A hardy perennial (true geranium) with palmately lobed leaves and saucer-shaped flowers in blue, purple, pink, or white.",
+    "medicinal_uses": "Root and herb used as an astringent, for diarrhea, and to stanch bleeding; also for mouth ulcers and sore throats.",
+    "habitat": "Native to temperate regions worldwide; found in woodlands, meadows, and alpine areas.",
+    "blooming_season": "Spring to Summer"
+  },
+  "orange dahlia": {
+    "scientific_name": "Dahlia spp. (cultivar)",
+    "family": "Asteraceae",
+    "description": "A tuberous perennial producing large, vibrant orange flower heads that can range from single to fully double forms.",
+    "medicinal_uses": "Historically, tubers were consumed for their inulin content to support blood sugar and digestion.",
+    "habitat": "Cultivated variety; native to Mexico and Central America; requires full sun and rich, well-drained soil.",
+    "blooming_season": "Mid-Summer to First Frost"
+  },
+  "pink-yellow dahlia": {
+    "scientific_name": "Dahlia spp. (bicolor cultivar)",
+    "family": "Asteraceae",
+    "description": "A dahlia cultivar featuring stunning bicolor blooms with petals that blend or contrast pink and yellow hues.",
+    "medicinal_uses": "Similar to other dahlias, tubers contain inulin and have been used for dietary support.",
+    "habitat": "Cultivated garden plant; thrives in sunny locations with fertile, moist but well-drained soil.",
+    "blooming_season": "Mid-Summer to First Frost"
+  },
+  "cautleya spicata": {
+    "scientific_name": "Cautleya spicata",
+    "family": "Zingiberaceae",
+    "description": "A rhizomatous perennial with striking spikes of tubular yellow-orange flowers and attractive, bamboo-like foliage.",
+    "medicinal_uses": "Not widely documented for medicinal use; primarily valued as an ornamental plant in shade gardens.",
+    "habitat": "Native to the Himalayas and China; grows in forest understories and moist, shaded mountain slopes.",
+    "blooming_season": "Late Summer to Early Fall"
+  },
+  "japanese anemone": {
+    "scientific_name": "Anemone hupehensis",
+    "family": "Ranunculaceae",
+    "description": "A graceful perennial with tall, wiry stems bearing simple, saucer-shaped flowers in shades of pink or white with a central golden boss.",
+    "medicinal_uses": "Used in traditional Chinese medicine for treating headaches, dizziness, and skin conditions.",
+    "habitat": "Native to China (despite common name); naturalized in Japan and temperate gardens worldwide; prefers partial shade.",
+    "blooming_season": "Late Summer to Mid-Autumn"
+  },
+  "black-eyed susan": {
+    "scientific_name": "Rudbeckia hirta",
+    "family": "Asteraceae",
+    "description": "A cheerful, drought-tolerant perennial with bright yellow or orange ray florets surrounding a distinctive dark brown to black central cone.",
+    "medicinal_uses": "Root tea used by Native Americans to treat colds, flu, and as a general immune stimulant; also for wound washing.",
+    "habitat": "Native to North American prairies, meadows, roadsides, and open woodlands.",
+    "blooming_season": "Summer to Early Fall"
+  },
+  "silverbush": {
+    "scientific_name": "Convolvulus cneorum",
+    "family": "Convolvulaceae",
+    "description": "A compact, evergreen shrub with silvery, silky foliage and morning-glory-like white flowers with yellow centers.",
+    "medicinal_uses": "No significant medicinal uses; grown primarily for its ornamental foliage and flowers in dry gardens.",
+    "habitat": "Native to coastal and rocky areas of the Mediterranean region.",
+    "blooming_season": "Spring to Summer"
+  },
+  "californian poppy": {
+    "scientific_name": "Eschscholzia californica",
+    "family": "Papaveraceae",
+    "description": "The state flower of California, known for its vibrant orange (sometimes yellow or red), cup-shaped flowers and delicate, blue-green fern-like foliage.",
+    "medicinal_uses": "Used as a mild sedative and analgesic for anxiety, insomnia, and pain relief; non-addictive alternative to opium poppy.",
+    "habitat": "Native to California and the southwestern United States; thrives in open, sunny areas with well-drained soil.",
+    "blooming_season": "Spring to Early Summer"
+  },
+  "osteospermum": {
+    "scientific_name": "Osteospermum spp.",
+    "family": "Asteraceae",
+    "description": "Also called African daisy, a perennial or annual with daisy-like flowers in vibrant purples, pinks, whites, and yellows, often with a contrasting central disc.",
+    "medicinal_uses": "Primarily ornamental; no well-documented medicinal uses.",
+    "habitat": "Native to South Africa; cultivated in gardens and containers in sunny locations worldwide.",
+    "blooming_season": "Spring to Fall"
+  },
+  "spring crocus": {
+    "scientific_name": "Crocus vernus",
+    "family": "Iridaceae",
+    "description": "A small, early-blooming cormous plant with goblet-shaped flowers in purple, white, yellow, or striped patterns, often appearing through snow.",
+    "medicinal_uses": "Not to be confused with saffron crocus; primarily ornamental, though some species have been used in traditional cough remedies.",
+    "habitat": "Native to alpine meadows and woodlands in Europe; naturalized in lawns and gardens.",
+    "blooming_season": "Late Winter to Early Spring"
+  },
+  "bearded iris": {
+    "scientific_name": "Iris × germanica",
+    "family": "Iridaceae",
+    "description": "A perennial rhizome with striking, ornate flowers featuring three upright standards and three drooping falls adorned with a fuzzy 'beard'.",
+    "medicinal_uses": "Rhizome (orris root) used in traditional medicine as a decongestant, diuretic, and in perfumery as a fixative.",
+    "habitat": "Cultivated hybrid of European origin; prefers sunny, well-drained garden beds.",
+    "blooming_season": "Late Spring to Early Summer"
+  },
+  "windflower": {
+    "scientific_name": "Anemone blanda",
+    "family": "Ranunculaceae",
+    "description": "A low-growing, tuberous perennial with daisy-like flowers in blue, white, or pink, and fern-like foliage.",
+    "medicinal_uses": "Contains irritant compounds; not recommended for internal use. Historically used externally for gout and rheumatism with caution.",
+    "habitat": "Native to southeastern Europe and the Caucasus; grows in woodlands, scrub, and rocky slopes.",
+    "blooming_season": "Early Spring"
+  },
+  "tree poppy": {
+    "scientific_name": "Romneya coulteri",
+    "family": "Papaveraceae",
+    "description": "A tall, woody-based perennial or subshrub with large, fragrant, crinkled white flowers and a central boss of golden stamens.",
+    "medicinal_uses": "Used by indigenous peoples as a sedative and pain reliever; however, all parts are potentially toxic.",
+    "habitat": "Native to dry chaparral and coastal sage scrub in southern California and northern Mexico.",
+    "blooming_season": "Summer to Early Fall"
+  },
+  "gazania": {
+    "scientific_name": "Gazania rigens",
+    "family": "Asteraceae",
+    "description": "A low-growing, drought-tolerant perennial with vibrant daisy-like flowers in hot colors (orange, yellow, red) that close at night or on cloudy days.",
+    "medicinal_uses": "Primarily ornamental; no significant traditional medicinal uses documented.",
+    "habitat": "Native to South Africa; thrives in coastal, sandy soils and sunny rockeries.",
+    "blooming_season": "Spring to Fall"
+  },
+  "azalea": {
+    "scientific_name": "Rhododendron spp.",
+    "family": "Ericaceae",
+    "description": "A popular spring-flowering shrub with clusters of brightly colored, often funnel-shaped flowers in shades of pink, red, white, or purple.",
+    "medicinal_uses": "Many species contain grayanotoxins and are toxic; not used internally. Some traditional uses for skin conditions with extreme caution.",
+    "habitat": "Native to Asia, Europe, and North America; prefers acidic, well-drained soil in partial shade.",
+    "blooming_season": "Spring"
+  },
+  "water lily": {
+    "scientific_name": "Nymphaea spp.",
+    "family": "Nymphaeaceae",
+    "description": "An aquatic plant with floating, round leaves and elegant, fragrant flowers that bloom on or above the water's surface.",
+    "medicinal_uses": "Used in traditional medicine across cultures for diarrhea, heart conditions, and as an anti-inflammatory; rhizomes and flowers are edible.",
+    "habitat": "Found in still or slow-moving freshwater ponds, lakes, and marshes worldwide.",
+    "blooming_season": "Summer"
+  },
+  "rose": {
+    "scientific_name": "Rosa spp.",
+    "family": "Rosaceae",
+    "description": "A woody perennial with thorny stems, pinnate leaves, and iconic, often fragrant flowers with numerous petals.",
+    "medicinal_uses": "Rose hips are rich in vitamin C and used for immune support; petals used in aromatherapy for stress relief and in skin care.",
+    "habitat": "Native to various temperate regions of the Northern Hemisphere; cultivated globally in gardens.",
+    "blooming_season": "Spring to Fall (varies by species and cultivar)"
+  },
+  "thorn apple": {
+    "scientific_name": "Datura stramonium",
+    "family": "Solanaceae",
+    "description": "An annual plant with large, trumpet-shaped white or purple flowers and spiny seed pods. Also known as Jimsonweed.",
+    "medicinal_uses": "Contains potent tropane alkaloids; historically used as a pain reliever and asthma treatment but is extremely toxic and dangerous.",
+    "habitat": "Native to North America; now a widespread weed in disturbed soils, roadsides, and fields.",
+    "blooming_season": "Summer to Early Fall"
+  },
+  "morning glory": {
+    "scientific_name": "Ipomoea purpurea",
+    "family": "Convolvulaceae",
+    "description": "A fast-growing annual vine with heart-shaped leaves and trumpet-shaped flowers that open in the morning and close by afternoon.",
+    "medicinal_uses": "Seeds of some species contain LSA (similar to LSD) and have been used in traditional rituals; also used as a laxative in some cultures.",
+    "habitat": "Native to tropical Americas; now widespread in gardens, fields, and disturbed areas worldwide.",
+    "blooming_season": "Summer to Early Fall"
+  },
+  "passion flower": {
+    "scientific_name": "Passiflora incarnata",
+    "family": "Passifloraceae",
+    "description": "A vigorous vine with intricate, showy flowers featuring a crown of filaments, and three-lobed leaves.",
+    "medicinal_uses": "Widely used as a sedative and anxiolytic for anxiety, insomnia, and nervous disorders.",
+    "habitat": "Native to southeastern United States and Central/South America; grows in sunny fields, roadsides, and thickets.",
+    "blooming_season": "Summer to Early Fall"
+  },
+  "lotus": {
+    "scientific_name": "Nelumbo nucifera",
+    "family": "Nelumbonaceae",
+    "description": "An aquatic perennial with large, round leaves that float or rise above water, and majestic pink or white flowers with a distinctive seed pod.",
+    "medicinal_uses": "All parts are used in traditional medicine: seeds for digestion, leaves for fever, rhizomes as a food and tonic.",
+    "habitat": "Native to Asia and Australia; grows in shallow, still freshwater ponds and lakes.",
+    "blooming_season": "Summer"
+  },
+  "toad lily": {
+    "scientific_name": "Tricyrtis hirta",
+    "family": "Liliaceae",
+    "description": "A shade-loving perennial with orchid-like flowers speckled with purple spots, growing along arching stems.",
+    "medicinal_uses": "Limited medicinal use; primarily ornamental, though some species used in traditional Asian medicine for burns.",
+    "habitat": "Native to Japan; thrives in moist, shaded woodland gardens and forest floors.",
+    "blooming_season": "Late Summer to Fall"
+  },
+  "anthurium": {
+    "scientific_name": "Anthurium andraeanum",
+    "family": "Araceae",
+    "description": "A tropical plant with glossy, heart-shaped red, pink, or white spathes surrounding a yellow spadix, and dark green leaves.",
+    "medicinal_uses": "No significant medicinal uses; popular as a long-lasting cut flower and houseplant.",
+    "habitat": "Native to rainforests of Colombia and Ecuador; grown as a greenhouse or indoor plant.",
+    "blooming_season": "Year-round in optimal conditions"
+  },
+  "frangipani": {
+    "scientific_name": "Plumeria rubra",
+    "family": "Apocynaceae",
+    "description": "A tropical tree or shrub with thick, succulent branches, fragrant five-petaled flowers in white, yellow, pink, or red.",
+    "medicinal_uses": "Latex used externally for skin conditions; bark and flowers used in traditional medicine for fever and inflammation (toxic if ingested).",
+    "habitat": "Native to Central America and the Caribbean; cultivated in tropical and subtropical gardens worldwide.",
+    "blooming_season": "Spring to Fall in warm climates"
+  },
+  "clematis": {
+    "scientific_name": "Clematis spp.",
+    "family": "Ranunculaceae",
+    "description": "A climbing vine with woody stems, compound leaves, and large, showy flowers in various colors and forms.",
+    "medicinal_uses": "Some species used in traditional Chinese medicine for pain, arthritis, and urinary issues (contains irritants, use with caution).",
+    "habitat": "Native to temperate regions worldwide; grows in woodlands, hedgerows, and cultivated gardens.",
+    "blooming_season": "Spring to Fall (species dependent)"
+  },
+  "hibiscus": {
+    "scientific_name": "Hibiscus rosa-sinensis",
+    "family": "Malvaceae",
+    "description": "A tropical shrub with large, trumpet-shaped flowers in vibrant red, pink, orange, yellow, or white.",
+    "medicinal_uses": "Flower tea (especially Hibiscus sabdariffa) used to lower blood pressure, cholesterol, and as a rich source of antioxidants.",
+    "habitat": "Native to East Asia; widely cultivated in tropical and subtropical regions.",
+    "blooming_season": "Year-round in warm climates"
+  },
+  "columbine": {
+    "scientific_name": "Aquilegia vulgaris",
+    "family": "Ranunculaceae",
+    "description": "A perennial with delicate, nodding flowers with backward-pointing spurs, in shades of blue, purple, pink, white, or yellow.",
+    "medicinal_uses": "Historically used for sore throats and skin conditions; seeds are toxic and should not be ingested.",
+    "habitat": "Native to Europe; grows in woodlands, meadows, and rocky slopes.",
+    "blooming_season": "Spring to Early Summer"
+  },
+  "desert-rose": {
+    "scientific_name": "Adenium obesum",
+    "family": "Apocynaceae",
+    "description": "A succulent shrub with a thick, swollen caudex, glossy leaves, and trumpet-shaped flowers in pink, red, or white.",
+    "medicinal_uses": "Latex used traditionally as arrow poison and for skin conditions; highly toxic if ingested.",
+    "habitat": "Native to arid regions of Africa and the Arabian Peninsula; grown as an ornamental in dry, sunny climates.",
+    "blooming_season": "Spring to Summer"
+  },
+  "tree mallow": {
+    "scientific_name": "Lavatera arborea",
+    "family": "Malvaceae",
+    "description": "A biennial or short-lived perennial shrub with large, hairy leaves and pink or purple hollyhock-like flowers.",
+    "medicinal_uses": "Leaves and flowers used in poultices for wounds and bruises; also as a mild digestive tea.",
+    "habitat": "Native to coastal regions of Europe and the Mediterranean; grows on cliffs, dunes, and waste ground.",
+    "blooming_season": "Late Spring to Summer"
+  },
+  "magnolia": {
+    "scientific_name": "Magnolia grandiflora",
+    "family": "Magnoliaceae",
+    "description": "An evergreen tree with large, glossy leaves and huge, fragrant white flowers that can be up to 12 inches across.",
+    "medicinal_uses": "Bark used in traditional Chinese medicine for anxiety, asthma, and digestive issues.",
+    "habitat": "Native to southeastern United States; cultivated in temperate gardens worldwide.",
+    "blooming_season": "Late Spring to Summer"
+  },
+  "cyclamen": {
+    "scientific_name": "Cyclamen persicum",
+    "family": "Primulaceae",
+    "description": "A tuberous perennial with heart-shaped leaves often marbled with silver, and distinctive reflexed petals in white, pink, or red.",
+    "medicinal_uses": "Tuber used historically for skin conditions and as a purgative, but is toxic and can be dangerous.",
+    "habitat": "Native to the Mediterranean and Middle East; grows in woodland and rocky areas; popular pot plant.",
+    "blooming_season": "Winter to Spring"
+  },
+  "watercress": {
+    "scientific_name": "Nasturtium officinale",
+    "family": "Brassicaceae",
+    "description": "A fast-growing aquatic or semi-aquatic perennial with small, white flowers and peppery-tasting leaves.",
+    "medicinal_uses": "Rich in vitamins and minerals; traditionally used as a blood purifier, digestive aid, and for respiratory health.",
+    "habitat": "Native to Europe and Asia; grows in clean, slow-moving streams and springs.",
+    "blooming_season": "Spring to Fall"
+  },
+  "canna lily": {
+    "scientific_name": "Canna indica",
+    "family": "Cannaceae",
+    "description": "A tropical perennial with large, banana-like leaves and bright flowers in red, orange, yellow, or pink.",
+    "medicinal_uses": "Rhizomes used in traditional medicine for fever, diarrhea, and as a diuretic; seeds used as beads.",
+    "habitat": "Native to tropical Americas; cultivated in wetlands, gardens, and as pond margin plants.",
+    "blooming_season": "Summer to Fall"
+  },
+  "hippeastrum": {
+    "scientific_name": "Hippeastrum spp.",
+    "family": "Amaryllidaceae",
+    "description": "Often called amaryllis, a bulbous plant with large, trumpet-shaped flowers on a tall, leafless stalk, in red, white, pink, or striped.",
+    "medicinal_uses": "Bulbs contain toxic alkaloids; used with extreme caution in traditional medicine for wounds and as an emetic.",
+    "habitat": "Native to tropical South America; widely grown as a potted plant and in gardens in warm climates.",
+    "blooming_season": "Late Winter to Spring"
+  },
+  "bee balm": {
+    "scientific_name": "Monarda didyma",
+    "family": "Lamiaceae",
+    "description": "A clump-forming perennial with shaggy, tubular flowers in red, pink, or purple, and aromatic leaves.",
+    "medicinal_uses": "Leaves used to make Oswego tea; antiseptic properties for sore throats, colds, and as a digestive aid.",
+    "habitat": "Native to eastern North America; grows in moist prairies, woods, and stream banks.",
+    "blooming_season": "Mid to Late Summer"
+  },
+  "ball moss": {
+    "scientific_name": "Tillandsia recurvata",
+    "family": "Bromeliaceae",
+    "description": "An epiphytic bromeliad forming small, gray-green, spherical clumps that attach to trees, wires, or rocks.",
+    "medicinal_uses": "Used in traditional medicine for diarrhea, hemorrhages, and as a poultice for wounds.",
+    "habitat": "Native to the Americas; grows on tree branches, telephone wires, and rocks in warm, humid climates.",
+    "blooming_season": "Spring"
+  },
+  "foxglove": {
+    "scientific_name": "Digitalis purpurea",
+    "family": "Plantaginaceae",
+    "description": "A biennial with tall spikes of tubular, spotted flowers in purple, pink, white, or yellow, and a basal rosette of hairy leaves.",
+    "medicinal_uses": "Source of digitalis, a cardiac glycoside used to treat heart failure and arrhythmias (highly toxic if self-administered).",
+    "habitat": "Native to Europe; naturalized in woodlands, clearings, and gardens in temperate regions.",
+    "blooming_season": "Early to Mid-Summer"
+  },
+  "bougainvillea": {
+    "scientific_name": "Bougainvillea spectabilis",
+    "family": "Nyctaginaceae",
+    "description": "A thorny, woody vine known for its vibrant papery bracts in magenta, purple, orange, or white surrounding small white flowers.",
+    "medicinal_uses": "Flowers and bracts used in traditional medicine for cough, fever, and as an anti-inflammatory.",
+    "habitat": "Native to South America; cultivated in tropical and subtropical gardens, often as a hedge or climbing plant.",
+    "blooming_season": "Year-round in warm climates, best in dry seasons"
+  },
+  "camellia": {
+    "scientific_name": "Camellia japonica",
+    "family": "Theaceae",
+    "description": "An evergreen shrub with glossy, dark green leaves and formal, rose-like flowers in white, pink, or red.",
+    "medicinal_uses": "Seeds produce tea oil used in cooking and cosmetics; leaves of C. sinensis used for tea (antioxidant properties).",
+    "habitat": "Native to East Asia; grows in woodland gardens and acidic, well-drained soils.",
+    "blooming_season": "Late Winter to Spring"
+  },
+  "mallow": {
+    "scientific_name": "Malva sylvestris",
+    "family": "Malvaceae",
+    "description": "A biennial or perennial with lobed leaves and pink or purple veined flowers with a distinctive column of fused stamens.",
+    "medicinal_uses": "Leaves and flowers used as a soothing demulcent for coughs, sore throats, and skin irritations.",
+    "habitat": "Native to Europe, North Africa, and Asia; grows in fields, roadsides, and waste places.",
+    "blooming_season": "Summer to Early Fall"
+  },
+  "mexican petunia": {
+    "scientific_name": "Ruellia simplex",
+    "family": "Acanthaceae",
+    "description": "A herbaceous perennial with lance-shaped leaves and trumpet-shaped purple, pink, or white flowers.",
+    "medicinal_uses": "Used in traditional Mexican medicine for fever, inflammation, and as a diuretic; also for snake bites.",
+    "habitat": "Native to Mexico, the Caribbean, and South America; invasive in wetlands and disturbed areas in warm climates.",
+    "blooming_season": "Spring to Fall"
+  },
+  "bromelia": {
+    "scientific_name": "Bromelia spp.",
+    "family": "Bromeliaceae",
+    "description": "A diverse genus of tropical plants, often epiphytic, with rosettes of stiff, spiny leaves and colorful flower spikes.",
+    "medicinal_uses": "Some species have edible fruits; sap used traditionally for skin conditions and as an anti-inflammatory.",
+    "habitat": "Native to tropical Americas; grows in rainforests, on trees, rocks, or as terrestrial plants.",
+    "blooming_season": "Varies by species, often Spring to Summer"
+  },
+  "blanket flower": {
+    "scientific_name": "Gaillardia pulchella",
+    "family": "Asteraceae",
+    "description": "A drought-tolerant annual or perennial with daisy-like flowers in vibrant red and yellow patterns, resembling woven blankets.",
+    "medicinal_uses": "Root tea used by Native Americans for gastroenteritis and skin disorders; also as a general tonic.",
+    "habitat": "Native to North and South America; thrives in prairies, plains, and dry, sunny gardens.",
+    "blooming_season": "Summer to Fall"
+  },
+  "trumpet creeper": {
+    "scientific_name": "Campsis radicans",
+    "family": "Bignoniaceae",
+    "description": "A vigorous, woody vine with compound leaves and clusters of large, trumpet-shaped orange or red flowers attractive to hummingbirds.",
+    "medicinal_uses": "Used in traditional medicine as a diuretic and for skin infections; can cause dermatitis in some people.",
+    "habitat": "Native to eastern United States; grows in woodlands, along streams, and on fences.",
+    "blooming_season": "Summer to Early Fall"
+  },
+  "blackberry lily": {
+    "scientific_name": "Iris domestica (formerly Belamcanda chinensis)",
+    "family": "Iridaceae",
+    "description": "A perennial with iris-like leaves and spotted orange flowers that give way to clusters of blackberry-like seed pods.",
+    "medicinal_uses": "Rhizome used in traditional Chinese medicine for sore throat, cough, asthma, and mumps.",
+    "habitat": "Native to East Asia; grows in well-drained soils in sunny meadows and garden borders.",
+    "blooming_season": "Mid to Late Summer"
+  }
+}

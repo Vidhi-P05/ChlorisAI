@@ -1,150 +1,165 @@
-# 🌿 PioGreen - Pioneering Green Intelligence
+# 🌸 ChlorisAI - Discover the Language of Flowers
 
-**PioGreen** is a mobile application that uses Artificial Intelligence and Machine Learning to promote sustainable agriculture.  
-It helps identify plants, detect plant diseases, and classify sustainable farming methods — aiming to make farming more efficient, data-driven, and eco-friendly.
+A beautiful, intelligent web application for flower identification with comprehensive botanical information.
+
+## ✨ Features
+
+- **🌺 Accurate Identification**: Advanced AI model for 102 flower species
+- **📚 Rich Information**: Scientific names, medicinal uses, habitat, blooming seasons
+- **🎨 Beautiful Interface**: Modern, responsive design with floating petals animation
+- **⚡ Fast Performance**: Optimized FastAPI backend with instant predictions
+- **🌿 Educational**: Learn about flowers with detailed botanical information
+
+## 🚀 Quick Start
+
+### 1. Install Dependencies
+```bash
+pip install fastapi uvicorn python-multipart torch torchvision pillow jinja2
+```
+
+### 2. Run Application
+```bash
+python app.py
+```
+
+### 3. Open Browser
+Go to **http://localhost:8080**
+
+## 📁 Project Structure
+
+```
+ChlorisAI/
+├── app.py                    # FastAPI backend with model
+├── templates/
+│   ├── index.html           # Beautiful frontend with animations
+│   └── static/
+│       └── js/
+│           └── main.js      # Interactive JavaScript
+├── checkpoints/
+│   └── best_model.pth      # Your trained model
+├── data/
+│   ├── class_names.json      # Flower class names
+│   └── flower_database.json # Comprehensive flower info
+└── README.md                # This file
+```
+
+## 🌐 API Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/` | GET | Beautiful web interface |
+| `/predict` | POST | Upload image and get prediction |
+| `/health` | GET | Health check |
+
+## 📱 Usage Experience
+
+1. **🌸 Upload**: Click or drag-and-drop your flower image
+2. **👁 Preview**: See your image with elegant preview
+3. **🔍 Analyze**: Click "Identify Flower" for AI analysis
+4. **📊 Results**: View comprehensive flower information:
+   - Flower name (common name)
+   - Scientific name (medical/botanical name)
+   - Confidence score with animated progress bar
+   - Detailed description
+   - Medicinal uses
+   - Natural habitat
+   - Blooming season
+
+## 🎨 Design Features
+
+- **Floating Petals**: Animated background effects
+- **Gradient Backgrounds**: Beautiful botanical color schemes
+- **Responsive Design**: Works on all devices
+- **Smooth Animations**: Hover effects and transitions
+- **Modern Typography**: Clean, readable fonts
+- **Interactive Elements**: Progress bars and micro-interactions
+
+## 📊 Output Format
+
+```json
+{
+  "flower_name": "pink primrose",
+  "confidence": 0.95,
+  "info": {
+    "scientific_name": "Primula vulgaris",
+    "description": "A delicate perennial flower...",
+    "medicinal_use": "Traditional uses...",
+    "habitat": "Woodlands and meadows...",
+    "blooming_season": "Spring to Summer"
+  }
+}
+```
+
+## 🔧 Technical Details
+
+- **Model**: EfficientNet-B0 (102 classes)
+- **Backend**: FastAPI with Jinja2 templates
+- **Frontend**: Modern HTML5 with CSS3 animations
+- **Image Processing**: PIL with torchvision transforms
+- **Device Support**: CPU/GPU automatic detection
+
+## 🌿 Flower Database
+
+Comprehensive information for all 102 flowers including:
+- Scientific names (Latin binomial nomenclature)
+- Botanical families
+- Detailed descriptions
+- Traditional medicinal uses
+- Natural habitats
+- Blooming seasons
+- Geographic origins
+
+## 🚀 Deployment
+
+### Development Server
+```bash
+python app.py
+```
+
+### Production Server
+```bash
+pip install gunicorn
+gunicorn app:app -w 4 -k uvicorn.workers.UvicornWorker
+```
+
+### Docker Deployment
+```dockerfile
+FROM python:3.9-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
+EXPOSE 8080
+CMD ["python", "app.py"]
+```
+
+## 📋 Requirements
+
+- Python 3.8+
+- FastAPI & Uvicorn
+- PyTorch & TorchVision
+- PIL (Pillow)
+- Jinja2 (for templates)
+- NumPy
+
+## 🎯 Model Performance
+
+- **Accuracy**: 87%+ on test set
+- **Input Size**: 224×224 RGB images
+- **Model Size**: ~57MB
+- **Inference Time**: <1 second per image
+- **Classes**: 102 flower species
+
+## 🌟 Special Features
+
+- **🌸 ChlorisAI Branding**: Beautiful logo and branding
+- **🎨 Botanical Theme**: Nature-inspired color palette
+- **📚 Educational Value**: Learn about flowers while identifying
+- **⚡ Real-time Processing**: Instant AI predictions
+- **🌿 Comprehensive Data**: 102 flowers with detailed information
 
 ---
 
-## 📘 Project Overview
+**🌻 ChlorisAI - Where AI Meets Botanical Beauty**
 
-Agriculture is one of the most important industries for human survival, but it faces serious challenges like crop diseases, overuse of resources, and unsustainable practices.  
-PioGreen aims to assist farmers, students, and researchers by providing a smart, AI-powered tool that supports better agricultural decision-making through image classification and sustainability insights.
-
-The app has three core modules:
-1. **Plant Detection** – Identify the type of plant using AI-based image classification.  
-2. **Plant Disease Detection** – Detect plant leaf diseases and provide information on symptoms and prevention.  
-3. **Sustainable Farming Classifier** – Suggest sustainable farming practices based on plant and crop data.
-
----
-
-## 🎯 Objectives
-
-- Build an easy-to-use mobile app that applies AI to support green agriculture.  
-- Use computer vision models to identify plant species and diseases from images.  
-- Encourage sustainable practices through intelligent recommendations.  
-- Help farmers and students learn about sustainable farming with technology.
-
----
-
-## 🚀 Features
-
-| Module | Functionality | Dataset Used | Model Type |
-|--------|----------------|---------------|-------------|
-| 🌿 **Plant Detection** | Identifies plant species from image | LeafSnap / Flavia | MobileNetV3 / EfficientNet-Lite |
-| 🍂 **Plant Disease Detection** | Detects crop diseases from leaves | PlantVillage (Kaggle) | CNN (ResNet50 / EfficientNet) |
-| 🌾 **Sustainable Farming Classifier** | Classifies farm fields as sustainable or not | Sustainable Farm Dataset / EuroSAT | Binary CNN Classifier |
-
----
-
-## 🧠 How It Works
-
-1. **User uploads or captures an image** (leaf, plant, or field).  
-2. The image is **preprocessed** (resized, normalized).  
-3. The app’s 3 modules run in sequence using **TensorFlow Lite models**.  
-4. **Results are displayed**:  
-   - Plant name  
-   - Disease (if any)  
-   - Sustainability score  
-   - Eco-friendly farming tips  
-
----
-
-
-## 🎨 App UI Structure
-
-| Screen | Description |
-|--------|--------------|
-| 🌱 **Splash Screen** | Animated logo “PioGreen – Pioneering Green Intelligence” |
-| 📸 **Home / Upload Screen** | Upload or capture plant/farm image |
-| 🧠 **Analysis Screen** | Displays progress while models infer results |
-| 📊 **Result Dashboard** | Shows identified plant, disease, sustainability score, and eco-tips |
-| 🌿 **Tips Section** | Curated and AI-generated sustainable farming recommendations |
-
----
-
-## ⚙️ Tech Stack
-
-| Layer | Technology |
-|-------|-------------|
-| **Frontend (Mobile)** | Flutter (Dart) |
-| **ML Models** | TensorFlow / Keras → TensorFlow Lite |
-| **Model Deployment** | TFLite Interpreter in Flutter |
-| **Backend (Optional)** | Flask API / Firebase |
-| **Database (Optional)** | Firebase Realtime / Firestore |
-| **Image Processing** | OpenCV / Pillow |
-
----
-
-## 🧩 Datasets
-
-| Module | Dataset | Size | Classes | Source |
-|--------|----------|-------|----------|--------|
-| **Plant Detection** | LeafSnap / Flavia | ~30K | 30–50 species | [LeafSnap](https://leafsnap.com/dataset/) |
-| **Disease Detection** | PlantVillage | ~54K | 38 | [Kaggle Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease) |
-| **Sustainability Detection** | Sustainable vs Non-Sustainable Farms | ~27K | 2 | [Kaggle Dataset](https://www.kaggle.com/datasets/d4rklucif3r/sustainable-vs-non-sustainable-farms) |
-
----
-
-## 🔧 Model Training Summary
-
-1. **Preprocessing**
-   - Image resizing (224×224)
-   - Normalization (0–1 scaling)
-   - Data augmentation (rotation, zoom, flip)
-
-2. **Training**
-   - Optimizer: Adam
-   - Loss: Categorical Crossentropy
-   - Epochs: 25–50 (depending on dataset size)
-   - Batch size: 32
-   - Early stopping with validation monitoring
-
-3. **Conversion**
-   - Trained `.h5` or `.pt` → `.tflite`
-   - Quantization (for smaller mobile model size)
-   - Integrated using `tflite_flutter` plugin in Flutter
-
----
-
-## 🌍 Sustainability Impact
-
-**PioGreen** aligns with UN Sustainable Development Goals:
-- **SDG 2:** Zero Hunger  
-- **SDG 12:** Responsible Consumption & Production  
-- **SDG 15:** Life on Land  
-
-By empowering farmers and agri-students with plant health and eco-awareness insights, it promotes a **greener, smarter future**.
-
----
-
-## 📊 Sample Output
-
-**Input:** Photo of a tomato leaf in a crop field  
-**Output:**
-🌿 Plant: Tomato (Solanum lycopersicum)
-🍂 Disease: Leaf Curl Virus (Confidence: 91%)
-🌾 Sustainability: Sustainable (Eco Index: 0.82)
-💡 Suggestion: Use neem extract spray and organic compost.
-
----
-
-## 💡 Future Enhancements
-- 📍 Geo-tagging farms using location data  
-- ☁️ Cloud-based model inference for faster results  
-- 🧬 Crop growth tracker for recurring scans  
-- 🔔 Push notifications with eco-farming reminders  
-
----
-
-## 🧑‍💻 Author
-**👩‍💻 Vidhi N. Pateliya**  
-Final Year, Computer Science Engineering (AI Specialization)  
-Developed as part of Internship Project on *Sustainability & AI*  
- 
----
- 
-
----
-
-## ✨ Tagline
-> “**Plantoneer** — Pioneering Green Intelligence for a Sustainable Tomorrow.” 🌍💚
+*Discover the language of flowers with cutting-edge artificial intelligence.*

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChlorisAI - Discover the Language of Flowers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --soft-green: #A8DF8E;
+            --botanical-cream: #F0FFDF;
+            --blush-pink: #FFD8DF;
+            --rose-pastel: #FFAAB8;
+            --gold: #D4AF37;
+            --dark-text: #2D3436;
+            --light-text: #636E72;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--botanical-cream) 0%, var(--blush-pink) 100%);
+            min-height: 100vh;
+            color: var(--dark-text);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .floating-petals {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .petal {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(ellipse at center, var(--rose-pastel) 0%, transparent 70%);
+            border-radius: 50% 0 50% 0;
+            opacity: 0.4;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(-10vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.4;
+            }
+            90% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: translateY(110vh) translateX(100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        header {
+            position: relative;
+            z-index: 10;
+            padding: 2rem;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            animation: gentle-spin 20s infinite linear;
+        }
+
+        @keyframes gentle-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .brand-name {
+            font-family: Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: var(--rose-pastel);
+            letter-spacing: 2px;
+        }
+
+        .hero {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 3rem;
+            font-weight: 300;
+            color: var(--dark-text);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .upload-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 20px 60px rgba(168, 223, 142, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            transition: all 0.4s ease;
+        }
+
+        .upload-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 80px rgba(255, 170, 184, 0.3);
+            border-color: var(--gold);
+        }
+
+        .upload-area {
+            border: 3px dashed var(--soft-green);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, rgba(240, 255, 223, 0.5) 0%, rgba(255, 216, 223, 0.5) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .upload-area::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .upload-area:hover::before {
+            opacity: 1;
+            animation: glow-pulse 2s infinite;
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.6; }
+        }
+
+        .upload-area:hover {
+            border-color: var(--gold);
+            background: linear-gradient(135deg, rgba(240, 255, 223, 0.8) 0%, rgba(255, 216, 223, 0.8) 100%);
+            transform: scale(1.02);
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--soft-green);
+        }
+
+        .upload-area p {
+            font-size: 1.1rem;
+            color: var(--light-text);
+            margin: 0;
+        }
+
+        .upload-content {
+            transition: all 0.3s ease;
+        }
+
+        #preview {
+            display: none;
+            max-width: 100%;
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 15px;
+            margin-top: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 0.6s ease;
+        }
+
+        .upload-area.has-image {
+            padding: 1.5rem;
+        }
+
+        .upload-area.has-image .upload-content {
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--soft-green) 0%, var(--rose-pastel) 100%);
+            color: white;
+            border: none;
+            padding: 1rem 3rem;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(168, 223, 142, 0.3);
+            font-weight: 600;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-primary:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 170, 184, 0.4);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-primary span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .result-card {
+            display: none;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 3rem;
+            margin-top: 2rem;
+            box-shadow: 0 20px 60px rgba(168, 223, 142, 0.2);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            animation: slideUp 0.6s ease;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-header-layout {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 3rem;
+            align-items: start;
+            margin-bottom: 2rem;
+        }
+
+        .result-image-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .result-image {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            border: 3px solid var(--gold);
+        }
+
+        .flower-header {
+            text-align: left;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .flower-name {
+            font-family: Georgia, serif;
+            font-size: 2.5rem;
+            color: var(--dark-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .scientific-name {
+            font-style: italic;
+            color: var(--gold);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .confidence-bar {
+            max-width: 100%;
+            margin: 1rem 0;
+        }
+
+        .confidence-text {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-container {
+            background: var(--botanical-cream);
+            height: 12px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--soft-green) 0%, var(--rose-pastel) 100%);
+            border-radius: 10px;
+            transition: width 1s ease;
+            box-shadow: 0 0 10px rgba(168, 223, 142, 0.5);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 0;
+            padding-top: 2rem;
+            border-top: 2px solid var(--botanical-cream);
+        }
+
+        .info-item {
+            background: linear-gradient(135deg, rgba(240, 255, 223, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+            padding: 1.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .info-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(168, 223, 142, 0.2);
+            border-color: var(--gold);
+        }
+
+        .info-item h4 {
+            font-family: Georgia, serif;
+            color: var(--rose-pastel);
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-item p {
+            color: var(--light-text);
+            line-height: 1.6;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+        }
+
+        footer {
+            position: relative;
+            z-index: 10;
+            margin-top: 4rem;
+            padding: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(168, 223, 142, 0.3) 0%, rgba(255, 170, 184, 0.3) 100%);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        footer p {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        .powered-by {
+            font-family: Georgia, serif;
+            font-style: italic;
+            color: var(--gold);
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .brand-name {
+                font-size: 1.8rem;
+            }
+
+            .upload-card {
+                padding: 2rem;
+            }
+
+            .result-header-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .result-image-container {
+                order: -1;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flower-name {
+                font-size: 2rem;
+            }
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-petals" id="petals"></div>
+
+    <header>
+        <div class="logo-container">
+            <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="48" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                <circle cx="50" cy="50" r="10" fill="#D4AF37"/>
+                <ellipse cx="50" cy="25" rx="8" ry="18" fill="#FFAAB8" opacity="0.8"/>
+                <ellipse cx="50" cy="25" rx="8" ry="18" fill="#FFAAB8" opacity="0.8" transform="rotate(45 50 50)"/>
+                <ellipse cx="50" cy="25" rx="8" ry="18" fill="#FFAAB8" opacity="0.8" transform="rotate(90 50 50)"/>
+                <ellipse cx="50" cy="25" rx="8" ry="18" fill="#FFAAB8" opacity="0.8" transform="rotate(135 50 50)"/>
+                <ellipse cx="50" cy="25" rx="8" ry="18" fill="#A8DF8E" opacity="0.7" transform="rotate(22.5 50 50)"/>
+                <ellipse cx="50" cy="25" rx="8" ry="18" fill="#A8DF8E" opacity="0.7" transform="rotate(67.5 50 50)"/>
+                <ellipse cx="50" cy="25" rx="8" ry="18" fill="#A8DF8E" opacity="0.7" transform="rotate(112.5 50 50)"/>
+                <ellipse cx="50" cy="25" rx="8" ry="18" fill="#A8DF8E" opacity="0.7" transform="rotate(157.5 50 50)"/>
+            </svg>
+            <h1 class="brand-name">ChlorisAI</h1>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>Discover the Language of Flowers</h1>
+        <p>AI-powered flower identification with botanical intelligence</p>
+    </div>
+
+    <div class="container">
+        <div class="upload-card">
+            <div class="upload-area" id="uploadArea" onclick="document.getElementById('fileInput').click()">
+                <input type="file" id="fileInput" accept="image/*" hidden onchange="previewImage(event)">
+                <div class="upload-content">
+                    <div class="upload-icon">🌸</div>
+                    <p>Click to upload or drag & drop your flower image</p>
+                </div>
+                <img id="preview" alt="Flower preview">
+            </div>
+
+            <div class="button-container">
+                <button class="btn-primary" id="identifyBtn" onclick="identifyFlower()" disabled>
+                    <span>Identify Flower</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="result-card" id="result">
+            <div class="result-header-layout">
+                <div class="flower-header">
+                    <h2 class="flower-name" id="flowerName"></h2>
+                    <p class="scientific-name" id="scientificName"></p>
+                    
+                    <div class="confidence-bar">
+                        <p class="confidence-text" id="confidenceText"></p>
+                        <div class="progress-container">
+                            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-image-container">
+                    <img id="resultImage" class="result-image" alt="Identified flower">
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4><span class="icon">📖</span> Description</h4>
+                    <p id="description"></p>
+                </div>
+
+                <div class="info-item">
+                    <h4><span class="icon">💊</span> Medicinal Uses</h4>
+                    <p id="medicinal_use"></p>
+                </div>
+
+                <div class="info-item">
+                    <h4><span class="icon">🌍</span> Habitat</h4>
+                    <p id="habitat"></p>
+                </div>
+
+                <div class="info-item">
+                    <h4><span class="icon">🌺</span> Blooming Season</h4>
+                    <p id="blooming_season"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ChlorisAI - Botanical Intelligence</p>
+        <p class="powered-by">✨ Powered by AI & Nature</p>
+    </footer>
+
+    <script>
+        // Create floating petals
+        const petalsContainer = document.getElementById('petals');
+        for (let i = 0; i < 15; i++) {
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+            petal.style.left = Math.random() * 100 + '%';
+            petal.style.animationDelay = Math.random() * 15 + 's';
+            petal.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            petalsContainer.appendChild(petal);
+        }
+
+        let selectedFile = null;
+
+        function previewImage(event) {
+            selectedFile = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = e => {
+                const preview = document.getElementById("preview");
+                const uploadArea = document.getElementById("uploadArea");
+                
+                preview.src = e.target.result;
+                preview.style.display = "block";
+                uploadArea.classList.add("has-image");
+                document.getElementById("identifyBtn").disabled = false;
+            };
+            reader.readAsDataURL(selectedFile);
+        }
+
+        async function identifyFlower() {
+            const btn = document.getElementById("identifyBtn");
+            const btnText = btn.querySelector('span');
+            btn.disabled = true;
+            btnText.textContent = "Analyzing...";
+
+            const formData = new FormData();
+            formData.append("file", selectedFile);
+
+            try {
+                const response = await fetch("/predict", {
+                    method: "POST",
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                // Display result image
+                const resultImage = document.getElementById("resultImage");
+                resultImage.src = document.getElementById("preview").src;
+
+                document.getElementById("flowerName").textContent = data.flower_name;
+                document.getElementById("scientificName").textContent = data.scientific_name;
+                
+                const confidence = (data.confidence * 100).toFixed(2);
+                document.getElementById("confidenceText").textContent = `Confidence: ${confidence}%`;
+                
+                // Animate progress bar
+                setTimeout(() => {
+                    document.getElementById("progressBar").style.width = confidence + '%';
+                }, 100);
+
+                document.getElementById("description").textContent = data.description;
+                document.getElementById("medicinal_use").textContent = data.medicinal_uses;
+                document.getElementById("habitat").textContent = data.habitat;
+                document.getElementById("blooming_season").textContent = data.blooming_season;
+                
+                document.getElementById("result").style.display = "block";
+                
+                // Smooth scroll to results
+                setTimeout(() => {
+                    document.getElementById("result").scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'nearest' 
+                    });
+                }, 200);
+
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Failed to identify flower. Please try again.");
+            }
+
+            btn.disabled = false;
+            btnText.textContent = "Identify Flower";
+        }
+
+        // Add drag and drop functionality
+        const uploadArea = document.getElementById('uploadArea');
+        
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            if (!uploadArea.classList.contains('has-image')) {
+                uploadArea.style.borderColor = 'var(--gold)';
+                uploadArea.style.transform = 'scale(1.02)';
+            }
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            if (!uploadArea.classList.contains('has-image')) {
+                uploadArea.style.borderColor = 'var(--soft-green)';
+                uploadArea.style.transform = 'scale(1)';
+            }
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = 'var(--soft-green)';
+            uploadArea.style.transform = 'scale(1)';
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                document.getElementById('fileInput').files = files;
+                previewImage({ target: { files: files } });
+            }
+        });
+    </script>
+</body>
+</html>
