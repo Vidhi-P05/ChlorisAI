@@ -9,7 +9,7 @@ flower_recognition/training_history.json
 flower_recognition/flower_model.pth
 flower_recognition/class_names.json
 checkpoints/
-data/class_names.json
+
 
 # ML artifacts
 *.pth
