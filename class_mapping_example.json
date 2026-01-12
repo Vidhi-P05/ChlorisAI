@@ -1,0 +1,33 @@
+{
+  "0": {
+    "common_name": "Rose",
+    "scientific_name": "Rosa",
+    "category": "Flowering Plant"
+  },
+  "1": {
+    "common_name": "Oak Tree",
+    "scientific_name": "Quercus",
+    "category": "Tree"
+  },
+  "2": {
+    "common_name": "Sunflower",
+    "scientific_name": "Helianthus annuus",
+    "category": "Flowering Plant"
+  },
+  "3": {
+    "common_name": "Maple Tree",
+    "scientific_name": "Acer",
+    "category": "Tree"
+  },
+  "4": {
+    "common_name": "Tulip",
+    "scientific_name": "Tulipa",
+    "category": "Flowering Plant"
+  },
+  "5": {
+    "common_name": "Fern",
+    "scientific_name": "Polypodiopsida",
+    "category": "Fern"
+  }
+}
+
