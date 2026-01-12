@@ -4,7 +4,7 @@ import logging
 import traceback
 from pathlib import Path
 from typing import Dict
-
+from huggingface_hub import hf_hub_download
 import torch
 import torch.nn as nn
 import torchvision.models as models
@@ -72,11 +72,21 @@ def load_model():
 
     # Load model
     model = FlowerClassifier(num_classes=len(class_names))
-    checkpoint = torch.load("checkpoints/best_model.pth", map_location=device)
+
+    # Download the model from Hugging Face if not present locally
+    HF_REPO_ID = "Vidhi-Pateliya-01/ChlorisAI-model"  # <-- your repo
+    MODEL_FILENAME = "best_model.pth"
+    CHECKPOINT_DIR = Path("checkpoints")
+    CHECKPOINT_DIR.mkdir(exist_ok=True)
+    MODEL_PATH = CHECKPOINT_DIR / MODEL_FILENAME
+
+    if not MODEL_PATH.exists():
+        logger.info("Downloading model from Hugging Face...")
+        MODEL_PATH = hf_hub_download(repo_id=HF_REPO_ID, filename=MODEL_FILENAME, cache_dir=str(CHECKPOINT_DIR))
+
+    checkpoint = torch.load(MODEL_PATH, map_location=device)
     model.load_state_dict(
-        checkpoint["model_state_dict"]
-        if "model_state_dict" in checkpoint
-        else checkpoint
+        checkpoint["model_state_dict"] if "model_state_dict" in checkpoint else checkpoint
     )
 
     model.to(device)
